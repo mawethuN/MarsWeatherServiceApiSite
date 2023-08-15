@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aff5305d52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https: //api.nasa.gov/insight_weather/?api_key=aaqtBaH7Gw2RbSt35Xqb3C1E9hOybUGiYsIZEak5&feedtype=json&ver=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap">
+</head>
+
+<body>
+    <header>
+        <section>
+            <nav>
+                <input type="checkbox" id="check">
+                <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+                <!--<label for class="logo">MAUWII</label>-->
+                <img src="images/website logo.png" id="logo">
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="dataVisualisation.html">Data</a></li>
+                   
+                    <li><a href="design.html" class="active">Design</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    </ul>
+            </nav>
+        </section>
+    </header>                   
+    
+    <main>
+        <section class="plan" id="plan">
+            <div class="content">
+                <section>
+                    <h1>DESIGN SECTION</h1>
+                    <img src="images/Untitled.jpg" alt="">
+                    <p>
+                        using this as a basic template for my data visualisation section, I will leave the remaining space white to not overshadow the data art.
+                    </p>
+                </section>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <section>
+            <div class="footerContainer">
+                <div class="footerNav">
+                    <ul>
+                        <button onclick="revealMes()">Contact Me on:</button>
+                        <p id="hiddenMes" style="display:none;">IG: @Mauwii_Illustrations Email:2128875@students.wits.ac.za</p>
+                        <li><a href="">refresh</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footerBottom">
+                <p>Copyright &copy; 2023 Designed by <span class="designer">Mawethu Nala</span></p>
+            </div>
+        </section>
+    </footer>
+</html>

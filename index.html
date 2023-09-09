@@ -18,12 +18,9 @@
             <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
-                <!--<label for class="logo">MAUWII</label>-->
-                <img src="images/website logo.png" id="logo">
                 <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="dataVisualisation.html">Data</a></li>
-                    
+                    <li><a href="index.html" class="active">Home</a></li>  
+                    <li><a href="about">About</a></li>
                     <li><a href="design.html">Design</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     </ul>
@@ -36,31 +33,62 @@
         <!--home section begins-->
         <section class="home" id="home">
             <div class="content">
-                <h1>Mars Weather Service</h1>   
+                <h1>Mars Weather Service</h1> 
+                <img src="images/pngimg.com - mars_planet_PNG38.png" alt="mars planet">  
             </div>
         </section>
         <!--home section ends-->
 
-        <!--about section starts-->
         <section class="about" id="about">
-            <h1 class="heading"><span>about</span> MWS </h1>
-            <div class="row">
-                <div class="image">
-                    <img src="pngwing.com (19).png" alt="picture of a plant">
-                </div>
-                <div class="content">
-                    <h1>what is this website about?</h1>
-                    <p>NASA’s InSight Mars lander takes continuous weather measurements (temperature, wind, pressure) on the surface of Mars at <strong>Elysium Planitia</strong>, a flat, smooth plain near Mars equator.
-                    </p>
-                    <p>
-                        This API provides per-Sol summary data for each of the last seven available Sols (Martian Days). As more data from a particular Sol are downlinked from the spacecraft (sometimes several days later), these values are recalculated, and consequently may change as more data are received on Earth. Additionally, please note that wind and other sensor data may not exist for certain date ranges. You can check out https://mars.nasa.gov/insight/weather/ and scroll down to the 'seasonal weather report' you'll see the gaps where no data exists for some sensors.
-                    </p>
-                    <p><a href="#top">back to home</a></p>
-                    <p id="home"></p>
-                </div>
+            <div class="content">
+                <h1>What is MSW</h1>
+                <p>
+                    NASA’s InSight Mars lander takes continuous weather measurements (temperature, wind, pressure) 
+                    on the surface of Mars at <strong>Elysium Planitia</strong>, a flat, smooth plain near Mars equator.
+                </p>
+                <p>
+                    This API provides per-Sol summary data for each of the last seven available Sols (Martian Days). 
+                </p>
+                <p>
+                    As more data from a particular Sol are downlinked from the spacecraft (sometimes several days later), 
+                    these values are recalculated, and consequently may change as more data are received on Earth.
+                    Additionally, please note that wind and other sensor data may not exist for certain date ranges.
+                </p>
+                <p>
+                    You can check out https://mars.nasa.gov/insight/weather/ and scroll down to the 'seasonal weather report' 
+                    you'll see the gaps where no data exists for some sensors.
+                </p>
             </div>
         </section>
-        <!--essay section ends-->
+
+        <section class="data" id="data">
+            <div class="content">
+                <h1>DATA SECTION</h1>
+                <P>
+                    This is the section where the data summary and link will go.
+                </P>
+                <link rel="stylesheet" href="dataVisualisation.html">
+                
+            </div>
+        </section>
+        
+        <section class="design" id="design">
+            <div class="content">
+                <h1>DESIGN PROCESS</h1>
+                <P>
+                    This is where the design summary will go.
+                </P>
+            </div>
+        </section>
+
+        <section class="blog" id="blog">
+            <div class="content">
+                <h1>BLOGS</h1>
+                <P>
+                    This is where the blog summary will go.
+                </P>
+            </div>
+        </section>
 
     </main>
     <footer>

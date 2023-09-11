@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/aff5305d52.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https: //api.nasa.gov/insight_weather/?api_key=aaqtBaH7Gw2RbSt35Xqb3C1E9hOybUGiYsIZEak5&feedtype=json&ver=1.0">
@@ -20,7 +20,7 @@
                 <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>  
-                    <li><a href="about">About</a></li>
+                    <li><a href="">About</a></li>
                     <li><a href="design.html">Design</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     </ul>
@@ -33,7 +33,7 @@
         <!--home section begins-->
         <section class="home" id="home">
             <div class="content">
-                <h1>Mars Weather Service</h1> 
+                <h1>Mars Weather Service</h1>
                 <img src="images/pngimg.com - mars_planet_PNG38.png" alt="mars planet">  
             </div>
         </section>
@@ -63,12 +63,15 @@
 
         <section class="data" id="data">
             <div class="content">
-                <h1>DATA SECTION</h1>
+                <h1>MSW DATA ANALYSIS</h1>
+                <img src="images/images (1).jpg" alt="picture of the insight mars lander">
                 <P>
-                    This is the section where the data summary and link will go.
+                    Using the provided information from NASA's open API, data about the current weather patterns have been collected and have been reintroduced as data graphs.
                 </P>
-                <link rel="stylesheet" href="dataVisualisation.html">
-                
+                <p>
+                    More information will be provided in the Data Visualisation page.
+                </p>
+                <ul><a href="dataVisualisation.html">EXPAND</a></ul>
             </div>
         </section>
         
@@ -78,6 +81,7 @@
                 <P>
                     This is where the design summary will go.
                 </P>
+                <ul><a href="design.html">Design</a></ul>
             </div>
         </section>
 
@@ -87,6 +91,8 @@
                 <P>
                     This is where the blog summary will go.
                 </P>
+                <ul><a href="blog.html">Blog</a></ul>
+                <a href="#home">back to home</a>
             </div>
         </section>
 
@@ -94,113 +100,10 @@
     <footer>
         <section>
             <div class="footerContainer">
-                <div class="socialIcons">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                   
-                </div>
-                <div class="footerNav">
-                    <ul>
-                        <button onclick="revealMes()">Contact Me on:</button>
-                        <p id="hiddenMes" style="display:none;">IG: @Mauwii_Illustrations Email:2128875@students.wits.ac.za</p>
-                        <li><a href="">refresh</a></li>
-                    </ul>
-                </div>
-            </div>
+                
             <div class="footerBottom">
                 <p>Copyright &copy; 2023 Designed by <span class="designer">Mawethu Nala</span></p>
             </div>
         </section>
     </footer>
-
-<!--
-<body>
-    <header>
-        <section>
-            <nav>
-                <input type="checkbox" id="check">
-                <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
-                <h1>Weather4You</h1>
-                    <ul>
-                        <li><a href="Home" class="active">Home</a>
-                            <ul>
-                                <li><a href="">About</a></li>
-                                <li><a href="">FAQS</a></li>
-                                <li><a href="">Contact</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">Blog</a>
-                            <ul>
-                                <li><a href="">APIs</a></li>
-                                <li><a href="">Data Visualisation</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">Design</a>
-                            <ul>
-                                <li><a href="">Wireframing</a></li>
-                                <li><a href="">Concept Ideas</a></li>
-                                <li><a href="">Theme and UI</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="">WebArt</a></li>
-                    </ul>
-            </nav>
-        </section>
-    </header>
-    <main>
-       
-        <section class="home" id="home">
-            <div class="content">
-                <h1>Hello Friend!</h1>
-                <p>My name is MAUWII and I would like to welcome you to my website.
-                    Feel free to look around and explore.
-                </p>
-            </div>
-        </section>
-       
-
-        
-        <section class="about" id="about">
-            <h1 class="heading"><span>about</span> mauwii </h1>
-            <div class="row">
-                <div class="image">
-                    <img src="pngwing.com.png" alt="picture of a plant">
-                </div>
-                <div class="content">
-                    <h1>what is this website about?</h1>
-                    <p>Well like the title says, this website is about...</p>
-                    <p>me :D </p>
-                    <p>At the beginning of the semester, we were taught about the importance of having an online presence.</p>
-                    <p>Those who did not have any connection to the internet practically dont exist...so this is me existing.</p>
-                    <p>If you wish to know more about me, I suggest checking out the other pages. Who knows, we might have a lot in common.</p>
-                    <p><a href="#top">back to home</a></p>
-                    <p id="home"></p>
-                </div>
-            </div>
-        </section>
-        
-    </main>
-    <footer>
-        <section>
-            <div class="footerContainer">
-                <div class="socialIcons">
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                   
-                </div>
-                <div class="footerNav">
-                    <ul>
-                        <button onclick="revealMes()">Contact Me on:</button>
-                        <p id="hiddenMes" style="display:none;">IG: @Mauwii_Illustrations Email:2128875@students.wits.ac.za</p>
-                        <li><a href="">refresh</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footerBottom">
-                <p>Copyright &copy; 2023 Designed by <span class="designer">Mawethu Nala</span></p>
-            </div>
-        </section>
-    </footer>
-</body>
--->
 </html>

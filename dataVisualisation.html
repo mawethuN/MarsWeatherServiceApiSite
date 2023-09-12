@@ -2,53 +2,55 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="index.js"></script>
+    <title>D3.js Line Graph</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/aff5305d52.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https: //api.nasa.gov/insight_weather/?api_key=aaqtBaH7Gw2RbSt35Xqb3C1E9hOybUGiYsIZEak5&feedtype=json&ver=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
 </head>
-
 <body>
     <header>
         <section>
             <nav>
                 <input type="checkbox" id="check">
                 <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
-                <!--<label for class="logo">MAUWII</label>-->
-                <img src="images/website logo.png" id="logo">
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="dataVisualisation.html"  class="active">Data</a></li>
-                    <li><a href="essay.html">Essay</a></li>
-                    <li><a href="design.html">Design</a></li>
+                    <li><a href="index.html">Home</a></li>  
                     <li><a href="blog.html">Blog</a></li>
-                    </ul>
+                </ul>
             </nav>
         </section>
-    </header>                   
-    
-    <main>
+    </header>
 
-        <p>this page is for the data visualisation</p>
-    </main>
+    <section class="plan" id="plan">
+        <div class="content">
+            <h1>DATA GRAPHS</h1>
+        <article>
+            <p>
+                In this section, the topic that was supposed to be covered was the Mars Insight Weather data collected by the rover. This was supposed to show the temperature, wind direction, atmoshperic pressure of that section of Mars. Unfortunately it was incomplete and had missing data, thus I was not able to render it.
+            </p>
+            <p>
+                instead, These graphs will be showing the Nasa NEO API, which stands for Near Earth Object Web Service. the NASA NEO API serves as a valuable resource for monitoring and studying Near-Earth Objects, helping to ensure the safety of our planet and advancing our knowledge of the solar system. It supports a wide range of scientific, educational, and practical applications.
+            </p>
+            <p>
+                This API provides data and information about NEOs, their characteristics, and their close approaches to Earth. Let's break down the URL parameters and explain the significance of this API:
+            </p>
+            <p>
+                start_date: Determines the beginning date of the data query, set to "2015-09-07."
+end_date: Specifies the end date of the data query, set to "2015-09-08."
+            </p>
+        </article>
+        </div>
+    </section>
+
+    <div id="chart-container"></div>
+    <script src="script.js"></script>
+
     <footer>
         <section>
-                <div class="footerNav">
-                    <ul>
-                        <button onclick="revealMes()">Contact Me on:</button>
-                        <p id="hiddenMes" style="display:none;">IG: @Mauwii_Illustrations Email:2128875@students.wits.ac.za</p>
-                        <li><a href="">refresh</a></li>
-                    </ul>
-                </div>
-            </div>
             <div class="footerBottom">
                 <p>Copyright &copy; 2023 Designed by <span class="designer">Mawethu Nala</span></p>
             </div>
         </section>
     </footer>
-
+</body>
 </html>

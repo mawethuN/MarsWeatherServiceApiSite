@@ -405,8 +405,3 @@ body{
   .show {
     opacity: 1;
   }
-
-  .small-image {
-    width: 50%; /* Set the width as a percentage */
-    height: auto; /* Automatically adjust the height */
-}

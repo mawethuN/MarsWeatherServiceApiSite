@@ -8,6 +8,7 @@ body{
     padding: 0;
   }
 
+  /*graph stuff*/
   .chart {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -17,7 +18,18 @@ body{
     fill: blue;
   }
   
-  
+  .tooltip {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: green;
+    border: 0;
+    border-radius: 8px;
+    pointer-events: none;
+    color: white;
+  }
 
   /*HOME PAGE STUFF*/
 
@@ -130,113 +142,6 @@ body{
    }
 
 
-   /*DATA PAGE*/
-
-   .data{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to bottom,#250101,#803636);
-   }
-
-   .data .content{
-    max-width: 80%;
-    font-size: 1.4rem;
-    font-weight: lighter;
-    line-height: 1.8;
-    padding: 1rem 0;
-    margin-left: 10rem;
-    color: #ffffff;
-   }
-   .data .content img{
-    width: 600px;
-    height: 400px;
-    object-position: center;
-    padding-left: 18rem;
-   }
-
-   
-
-   .data .content h1{
-    font-size: 7rem;
-    text-transform: uppercase;
-    color: #ffffff;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-   }
-
-    /*DESIGN PAGE*/
-    .paper{
-      min-height: 100vh;
-      display: flex;
-      background: url(images/MARS_LANDSCAPE.jpg) no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-  
-    .paper .content{
-      margin-left: 3rem;
-      max-width: 50rem;
-    }
-  
-    .paper .content p{
-      font-size: 1.6rem;
-      color: #182a1b;
-      padding: 1rem 0;
-      line-height: 1.8;
-      text-align: left;
-      margin-left: 4rem;
-    }
-  
-    .paper .content h1{
-      margin-top: 6rem;
-      font-size: 4rem;
-      text-transform: uppercase;
-      color: #461d1d;
-    }
-
-/*BLOG PAGE*/
-
-.plan{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-   }
-
-   .plan .content{
-    max-width: 60%;
-    font-size: 1.4rem;
-    font-weight: lighter;
-    line-height: 1.8;
-    padding: 1rem 0;
-    margin-left: 20rem;
-    color: #000000;
-   }
-
-   .plan .content p{
-    color: #000;
-   }
-
-   .plan .content h1{
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: #7a2424;
-    margin-left: 15remrem;
-  }
-
-  .plan .content h2{
-    font-size: 2rem;
-    text-transform: uppercase;
-    color: #000000;
-  }
-
-  .plan .content .image{
-    flex: 1 1 30rem;
-  }
-
-  .plan .content .image img{
-    width: 50%;
-  }
 
 
 /*Header format and details*/

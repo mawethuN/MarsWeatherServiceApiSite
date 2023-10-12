@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <meta charset="utf-8">
+    <head>
+        <script src="https://d3js.org/d3.v4.js"></script>
+        <script src="style.css"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home</title>
+        <script defer src="index.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="https://kit.fontawesome.com/aff5305d52.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=i0NPDzV44zM4T1aVJsEFu8aTTIOTH9cLM7QzDuGp">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap">
+    </head>
+
+    <body>
+        <header>
+            <section>
+                <nav>
+                    <input type="checkbox" id="check">
+                    <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>  
+                        <li><a href="dataVisualisation.html">D3.js</a></li>
+                        <li><a href="dataArt.html">Data Art</a></li>
+                        <li><a href="design.html">Design</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                </nav>
+            </section>
+        </header>
+        
+        <main>
+            <section class="about" id="about">
+                <div class="content">
+                    <h2>INTERACTIVE GRAPH</h2>
+                    <p>
+                        This section is dedicated to the interactive graph. In order not to cause conflict with the other graphs I have decided to create its own section whereby the user can interact with it.
+                    </p>
+
+                    <div id="my_dataviz"></div>
+
+                    <p>This graph shows the asteroids recorded</p>
+                </div>
+            </section>
+
+            </main>
+            
+            <script src="graph.js"></script>
+
+    </body>
+</html>

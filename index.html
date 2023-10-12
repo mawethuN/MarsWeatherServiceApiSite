@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="https://kit.fontawesome.com/aff5305d52.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://api.nasa.gov/insight_weather/?api_key=aaqtBaH7Gw2RbSt35Xqb3C1E9hOybUGiYsIZEak5&feedtype=json&ver=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap">
@@ -20,11 +21,10 @@
                 <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
                 <ul>
                     <li><a href="index.html">Home</a></li>  
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#data">Data Vis</a></li>
-                    <li><a href="#data2">Data Art</a></li>
-                    <li><a href="#design">Design</a></li>
-                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="dataVisualisation.html">D3.js</a></li>
+                    <li><a href="dataArt.html">Data Art</a></li>
+                    <li><a href="design.html">Design</a></li>
+                    <li><a href="blog.html">Blog</a></li>
                     </ul>
             </nav>
         </section>
@@ -35,81 +35,24 @@
         <!--home section begins-->
         <section class="home" id="home">
             <div class="content">
-                <h1>Mars Weather Service</h1>
-                <img src="images/pngimg.com - mars_planet_PNG38.png" alt="mars planet">  
+                <h1 class="slide-in">Neo Spacer.com</h1>  
+               
             </div>
         </section>
         <!--home section ends-->
 
         <section class="about" id="about">
             <div class="content">
-                <h1>What is MSW</h1>
+                <h2>About</h2>
                 <p>
-                    NASA’s InSight Mars lander takes continuous weather measurements (temperature, wind, pressure) 
-                    on the surface of Mars at <strong>Elysium Planitia</strong>, a flat, smooth plain near Mars equator.
+                    NEO SPACER.COM is a website dedicated to showing near earth objects using the NASA open API.
                 </p>
                 <p>
-                    This API provides per-Sol summary data for each of the last seven available Sols (Martian Days). 
+                    This API provides per-Sol summary data for objects that have been cited within earths orbit in the past couple of. 
                 </p>
                 <p>
-                    As more data from a particular Sol are downlinked from the spacecraft (sometimes several days later), 
-                    these values are recalculated, and consequently may change as more data are received on Earth.
-                    Additionally, please note that wind and other sensor data may not exist for certain date ranges.
+                   Furthermore, this website will elaborate on how Neo Spacer.com is developed which include design purposes and graphs using the API.
                 </p>
-                <p>
-                    You can check out https://mars.nasa.gov/insight/weather/ and scroll down to the 'seasonal weather report' 
-                    you'll see the gaps where no data exists for some sensors.
-                </p>
-            </div>
-        </section>
-
-        <section class="data" id="data">
-            <div class="content">
-                <h1>MSW DATA ANALYSIS</h1>
-                <img src="images/wallpaperflare.com_wallpaper (2).jpg" alt="picture of the insight mars lander">
-                <P>
-                    Using the provided information from NASA's open API, data about the current weather patterns have been collected and have been reintroduced as data graphs.
-                    There are 2 sections in this category which include Data Art and Static graphs created through the use of the open API.
-                </P>
-                <p>
-                    More information will be provided in the Data Visualisation page.
-                </p>
-                <ul><a href="dataVisualisation.html">EXPAND</a></ul>
-            </div>
-        </section>
-
-        <section class="data" id="data2">
-            <div class="content">
-                <h1>DATA ART</h1>
-                <img src="images/mars rover pic 2.jpg" alt="picture of the insight mars lander">
-                <P>
-                    This section is reserved for data art.
-                </P>
-                <p>
-                    More information will be provided in the Data Art page.
-                </p>
-                <ul><a href="dataArt.html">EXPAND</a></ul>
-            </div>
-        </section>
-        
-        <section class="design" id="design">
-            <div class="content">
-                <h1>DESIGN PROCESS</h1>
-                <P>
-                    Designing a website is a journey where creativity meets strategy. I kick off by understanding the project's purpose and audience. Research helps me grasp trends and user preferences. Then, I sketch out initial concepts and build wireframes for layout. Once approved, I dive into crafting high-fidelity mockups, carefully selecting colors, fonts, and visuals. The development phase brings designs to life, adding functionality and responsiveness. But it doesn't end there; usability testing ensures a seamless user experience. It's a meticulous process that fuses aesthetics with user-centric design, resulting in a website that's not just visually pleasing but also highly functional.
-                </P>
-                <ul><a href="design.html">Design</a></ul>
-            </div>
-        </section>
-
-        <section class="blog" id="blog">
-            <div class="content">
-                <h1>BLOGS</h1>
-                <P>
-                    The impact of data visualization is maximized when combined with exceptional UI/UX design. User Interface (UI) design focuses on the aesthetic and functional aspects of the interface, ensuring that users can interact effortlessly with the data. User Experience (UX) design, on the other hand, enhances the overall usability, accessibility, and pleasure of the interaction.But the impact of data visualization is maximized when combined with exceptional UI/UX design. User Interface (UI) design focuses on the aesthetic and functional aspects of the interface, ensuring that users can interact effortlessly with the data. User Experience (UX) design, on the other hand, enhances the overall usability, accessibility, and pleasure of the interaction.
-                </P>
-                <ul><a href="blog.html">Blog</a></ul>
-                <a href="#home">back to home</a>
             </div>
         </section>
 

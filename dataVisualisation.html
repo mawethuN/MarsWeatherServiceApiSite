@@ -6,6 +6,8 @@
     <title>D3.js Line Graph</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://kit.fontawesome.com/aff5305d52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap">
 </head>
 <body>
     <header>
@@ -15,21 +17,20 @@
                 <label for="check" class="burger-button"><i class="fa-solid fa-bars"></i></label>
                 <ul>
                     <li><a href="index.html">Home</a></li>  
+                    <li><a href="dataVisualisation.html">D3.js</a></li>
+                    <li><a href="dataArt.html">Data Art</a></li>
+                    <li><a href="design.html">Design</a></li>
                     <li><a href="blog.html">Blog</a></li>
                 </ul>
             </nav>
         </section>
     </header>
 
-    <section class="plan" id="plan">
+    <section class="about" id="about">
         <div class="content">
-            <h1>DATA GRAPHS</h1>
-        <article>
+            <h2>DATA GRAPHS</h2>
             <p>
-                In this section, the topic that was supposed to be covered was the Mars Insight Weather data collected by the rover. This was supposed to show the temperature, wind direction, atmoshperic pressure of that section of Mars. Unfortunately it was incomplete and had missing data, thus I was not able to render it.
-            </p>
-            <p>
-                instead, These graphs will be showing the Nasa NEO API, which stands for Near Earth Object Web Service. the NASA NEO API serves as a valuable resource for monitoring and studying Near-Earth Objects, helping to ensure the safety of our planet and advancing our knowledge of the solar system. It supports a wide range of scientific, educational, and practical applications.
+                Nasa NEO API, which stands for Near Earth Object Web Service. the NASA NEO API serves as a valuable resource for monitoring and studying Near-Earth Objects, helping to ensure the safety of our planet and advancing our knowledge of the solar system. It supports a wide range of scientific, educational, and practical applications.
             </p>
             <p>
                 This API provides data and information about NEOs, their characteristics, and their close approaches to Earth. Let's break down the URL parameters and explain the significance of this API:
@@ -38,12 +39,15 @@
                 start_date: Determines the beginning date of the data query, set to "2015-09-07."
 end_date: Specifies the end date of the data query, set to "2015-09-08."
             </p>
-        </article>
         </div>
     </section>
 
-    <div id="chart-container"></div>
-    <script src="script.js"></script>
+    <section class="about" id="about">
+        <div id="chart-container"></div>
+        <script src="script.js"></script>
+    </section>
+
+    
 
     <footer>
         <section>

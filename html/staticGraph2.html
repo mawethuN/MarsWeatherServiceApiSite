@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DataArt</title>
+    <title>D3.js Line Graph</title>
     <link rel="stylesheet" href="../css/style.css">
     <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://kit.fontawesome.com/aff5305d52.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap">
 </head>
 <body>
@@ -25,21 +26,25 @@
         </section>
     </header>
 
-    
-        
-        <section class="about" id="about">
-            <div class="content">
-                <h2>DATA ART</h2>
-                <svg id="neoCircles"></svg>
-                <script src="../javascript/data.js"></script>
-                </div>
-                
-                
-            </div>
+    <section class="about" id="about">
+        <div class="content">
+            <h2>Full Static Graph</h2>
+            <p>
+                The graph depicted here shows the days in which the near earth objects were recorded.
+                The Y axis represents the kilometers per hour in which the neo's were travelling for each date.
+                I merged two graphs to display different information.
+            </p>
+            <div id="chart"></div>
+            <script src="../javascript/staticGraph2.js"></script>
+            <p>
+                The line graph shows the kph for each date whereby the neos were recorded. The bar graph displays how many neos were present in comparison to each date recorded.
+            </p>
             
-        </section>  
-   
-   
+        </div>
+    </section>
+
+    
+
     <footer>
         <section>
             <div class="footerBottom">

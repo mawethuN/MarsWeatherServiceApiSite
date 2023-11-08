@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
         <link rel="stylesheet" href="../css/style.css">
-        <script src="../graph.js"></script>
         <script src="https://kit.fontawesome.com/aff5305d52.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://api.nasa.gov/neo/rest/v1/feed?start_date=2015-09-07&end_date=2015-09-08&api_key=i0NPDzV44zM4T1aVJsEFu8aTTIOTH9cLM7QzDuGp">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap">
@@ -35,11 +34,9 @@
                     <p>
                         This section is dedicated to the interactive graph. In order not to cause conflict with the other graphs I have decided to create its own section whereby the user can interact with it.
                     </p>
+                    <div id="chart"></div>
+                    <script src="../javascript/graph.js"></script>
 
-                    <div id="my_dataviz"></div>
-
-                    <p>This graph shows the asteroids recorded</p>
-                </div>
             </section>
 
             </main>

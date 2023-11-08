@@ -1,81 +1,111 @@
-const API_KEY = 'i0NPDzV44zM4T1aVJsEFu8aTTIOTH9cLM7QzDuGp';
+const apiKey = 'i0NPDzV44zM4T1aVJsEFu8aTTIOTH9cLM7QzDuGp';
 const startDate = '2015-09-07';
 const endDate = '2015-09-08';
+const apiUrl = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${apiKey}`;
 
-const apiUrl = `https://api.nasa.gov/neo/rest/v1/feed?start_date=${startDate}&end_date=${endDate}&api_key=${API_KEY}`;
-
-// Fetch data from the NASA API
+// Fetch NEO data from NASA API
 fetch(apiUrl)
   .then((response) => response.json())
   .then((data) => {
-    const asteroidCounts = [];
+    // Extract NEO data for the 7th and 8th days
+    const day7Data = data.near_earth_objects[startDate];
+    const day8Data = data.near_earth_objects[endDate];
 
-    for (const date in data.near_earth_objects) {
-      if (data.near_earth_objects.hasOwnProperty(date)) {
-        const asteroids = data.near_earth_objects[date];
-        asteroidCounts.push({ date, asteroidCount: asteroids.length });
-      }
+    // Create an array of data for the two days
+    const dataForTwoDays = [day7Data, day8Data];
+
+    // Set up dimensions for the chart
+    const width = 600;
+    const height = 400;
+    const radius = Math.min(width, height) / 2;
+    const arcPadding = 10;
+
+    // Create a SVG element
+    const svg = d3.select('#chart').append('svg').attr('width', width).attr('height', height);
+
+    // Define an arc generator
+    const arc = d3.arc().innerRadius(0).outerRadius(radius - arcPadding);
+
+    // Create a group element for the pie chart
+    const g = svg.append('g').attr('transform', `translate(${width / 2},${height / 2})`);
+
+    // Create the pie generator
+    const pie = d3.pie().value((d) => d.length);
+
+    // Set up colors for the segments
+    const colors = ['blue', 'red'];
+
+    // Hover effect
+    function handleMouseOver(d, i) {
+      d3.select(this).attr('fill', d3.rgb(colors[i]).darker(1));
     }
 
-    // set the dimensions and margins of the graph
-    var margin = { top: 10, right: 30, bottom: 30, left: 40 },
-      width = 460 - margin.left - margin.right,
-      height = 400 - margin.top - margin.bottom;
+    function handleMouseOut(d, i) {
+      d3.select(this).attr('fill', colors[i]);
+    }
 
-    // append the svg object to the body of the page
-    var svg = d3
-      .select('#my_dataviz')
-      .append('svg')
-      .attr('width', width + margin.left + margin.right)
-      .attr('height', height + margin.top + margin.bottom)
-      .append('g')
-      .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+    const onClick = function (event, d) {
+      const numObjects = d.length;
+      alert(`Number of Near-Earth Objects: ${numObjects}`);
+    };
 
-    // X axis: scale and draw
-    var x = d3
-      .scaleBand()
-      .domain(asteroidCounts.map((d) => d.date))
-      .range([0, width])
-      .padding(0.1); // Add padding between bars
-    svg
-      .append('g')
-      .attr('transform', 'translate(0,' + height + ')')
-      .call(d3.axisBottom(x));
-
-    // Y axis: scale and draw
-    var y = d3.scaleLinear().range([height, 0]);
-    y.domain([0, d3.max(asteroidCounts, (d) => d.asteroidCount)]);
-    svg.append('g').call(d3.axisLeft(y));
-
-    // Define the tooltip
-    var tooltip = d3
-      .select('#my_dataviz')
-      .append('div')
-      .attr('class', 'tooltip')
-      .style('opacity', 0);
-
-    // append the bar rectangles to the svg element
-    svg
-      .selectAll('rect')
-      .data(asteroidCounts)
+    // Draw the pie segments
+    const arcs = g
+      .selectAll('arc')
+      .data(pie(dataForTwoDays))
       .enter()
+      .append('g')
+      .on('click', onClick)
+      .attr('cursor', 'pointer');
+
+    arcs
+      .append('path')
+      .attr('d', arc)
+      .attr('fill', (d, i) => colors[i])
+      .on('mouseover', handleMouseOver)
+      .on('mouseout', handleMouseOut);
+
+    // Create a legend on the right side
+    const legend = svg
+      .selectAll('.legend')
+      .data(dataForTwoDays)
+      .enter()
+      .append('g')
+      .attr('class', 'legend')
+      .attr('transform', (d, i) => `translate(${width - 100},${i * 20})`);
+
+    legend
       .append('rect')
-      .attr('x', (d) => x(d.date))
-      .attr('width', x.bandwidth())
-      .attr('y', (d) => y(d.asteroidCount))
-      .attr('height', (d) => height - y(d.asteroidCount))
-      .style('fill', 'green')
-      .on('mouseover', function (d) {
-        // Show tooltip on hover over the bars
-        tooltip.transition().duration(200).style('opacity', 0.9);
-        tooltip
-          .html(`Date: ${d.date}<br>Asteroid Count: ${d.asteroidCount}`)
-          .style('left', x(d.date) + x.bandwidth() / 2 + 'px')
-          .style('top', y(d.asteroidCount) - 100 + 'px');
-      })
-      .on('mouseout', function (d) {
-        // Hide tooltip on mouseout
-        tooltip.transition().duration(500).style('opacity', 0);
+      .attr('x', 0)
+      .attr('width', 18)
+      .attr('height', 18)
+      .style('fill', (d, i) => colors[i]);
+
+    legend
+      .append('text')
+      .attr('x', 25)
+      .attr('y', 9)
+      .attr('dy', '.35em')
+      .style('text-anchor', 'start')
+      .text((d, i) => {
+        const date = new Date(d[0].close_approach_data[0].close_approach_date);
+        const color = colors[i] === 'blue' ? 'Blue' : 'Pink';
+        return `${date.toDateString()} (${color})`;
       });
+
+    // Add labels and title
+    svg
+      .append('text')
+      .attr('x', width / 2)
+      .attr('y', height + 30)
+      .attr('text-anchor', 'middle')
+      .text('Near-Earth Objects');
+
+    svg
+      .append('text')
+      .attr('x', width / 2)
+      .attr('y', 20)
+      .attr('text-anchor', 'middle')
+      .text('day 7 and 8');
   })
-  .catch((error) => console.error('Error:', error));
+  .catch((error) => console.error(error));

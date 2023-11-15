@@ -1,3 +1,7 @@
+.neo-text {
+  display: none;
+}
+
 .rectangle:hover {
   opacity: 0.66;
 }
@@ -36,6 +40,60 @@ body{
     color: white;
   }
 
+  /*Design home page*/
+ #data{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(../designImages/earth\ 3.jpg);
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+ }
+
+ #data .content{
+  max-width: 50%;
+  text-align: left;
+  margin-left: 2rem;
+ }
+
+ #data .content h1{
+  font-size: 7rem;
+  padding-top: 4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  transition: linear, 3s;
+ }
+
+  /*Design home page*/
+ #designSt{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(../designImages/earth4.jpg);
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+ }
+
+ #designSt .content{
+  max-width: 50%;
+  text-align: left;
+  margin-left: 2rem;
+ }
+
+ #designSt .content h1{
+  font-size: 7rem;
+  padding-top: 4rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: center;
+  font-family: 'Nanum Gothic', sans-serif;
+  transition: linear, 3s;
+ }
+  
   /*HOME PAGE STUFF*/
 
   img{
@@ -112,7 +170,7 @@ body{
   }
 
    .about .content h2{
-    font-size: 5rem;
+    font-size: 3rem;
     text-transform: uppercase;
     color: #ffffff;
     text-align: left;
@@ -121,7 +179,7 @@ body{
    }
 
    .about .content h3{
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
     color: #ffffff;
     text-align: left;
@@ -132,7 +190,7 @@ body{
 
    .about .content{
     max-width: 80%;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: lighter;
     line-height: 1.8;
     padding: 1rem 0;
